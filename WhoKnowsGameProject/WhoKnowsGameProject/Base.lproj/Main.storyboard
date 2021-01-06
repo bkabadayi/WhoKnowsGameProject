@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gtw-wq-h15">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Opening Screen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Opening Screen" customClass="OpeningScreenViewController" customModule="WhoKnowsGameProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brainlogo" translatesAutoresizingMaskIntoConstraints="NO" id="Hhk-eB-FPm">
+                                <rect key="frame" x="50" y="178" width="314" height="184"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Huq-5K-NGh">
+                                <rect key="frame" x="15" y="487" width="384" height="285"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpb-B5-Wf8">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="55"/>
+                                        <color key="backgroundColor" red="0.39039858645103825" green="0.71247254959260575" blue="0.30100961696800738" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="FHj-K0-VcG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="27"/>
+                                        <state key="normal" title="New Game">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-cJ-JjF">
+                                        <rect key="frame" x="0.0" y="115" width="384" height="55"/>
+                                        <color key="backgroundColor" red="1" green="0.38905385250000002" blue="0.48106224089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="27"/>
+                                        <state key="normal" title="High Score">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECz-45-TCd">
+                                        <rect key="frame" x="0.0" y="230" width="384" height="55"/>
+                                        <color key="backgroundColor" red="1" green="0.38905385250000002" blue="0.48106224089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="27"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Qpb-B5-Wf8" firstAttribute="height" secondItem="ECz-45-TCd" secondAttribute="height" id="5Fq-DA-A2X"/>
+                                    <constraint firstAttribute="width" constant="384" id="Dqh-xi-mcG"/>
+                                    <constraint firstItem="Qpb-B5-Wf8" firstAttribute="height" secondItem="gBg-cJ-JjF" secondAttribute="height" id="Pa4-Z3-LYu"/>
+                                    <constraint firstItem="Qpb-B5-Wf8" firstAttribute="width" secondItem="Huq-5K-NGh" secondAttribute="width" id="PlZ-aA-Vl5"/>
+                                    <constraint firstItem="ECz-45-TCd" firstAttribute="width" secondItem="gBg-cJ-JjF" secondAttribute="width" id="QQu-sc-XEc"/>
+                                    <constraint firstItem="gBg-cJ-JjF" firstAttribute="width" secondItem="Qpb-B5-Wf8" secondAttribute="width" id="klo-Sp-8kg"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.58764332975104594" blue="0.94978042371387272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hhk-eB-FPm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="2lt-54-zMW"/>
+                            <constraint firstItem="Huq-5K-NGh" firstAttribute="top" secondItem="Hhk-eB-FPm" secondAttribute="bottom" constant="125" id="kkX-ar-MnO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Huq-5K-NGh" secondAttribute="trailing" constant="15" id="lCG-Cb-q1z"/>
+                            <constraint firstItem="Hhk-eB-FPm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="peK-Sn-beg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Huq-5K-NGh" secondAttribute="bottom" constant="90" id="soG-WF-ApL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hhk-eB-FPm" secondAttribute="trailing" constant="50" id="vYi-Ds-MBs"/>
+                            <constraint firstItem="Huq-5K-NGh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="yS7-XQ-nE7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="j7T-Oh-S3o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802.89855072463774" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MrY-BM-N6k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gtw-wq-h15" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5cz-HN-JzE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="w9z-Rx-2Oy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0i-mG-GXQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-107.24637681159422" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="brainlogo" width="417" height="487"/>
+    </resources>
+</document>
