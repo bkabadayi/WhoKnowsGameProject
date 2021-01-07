@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,22 +34,31 @@
                                         <state key="normal" title="New Game">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="newGameButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2J-4d-LBH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-cJ-JjF">
                                         <rect key="frame" x="0.0" y="115" width="384" height="55"/>
-                                        <color key="backgroundColor" red="1" green="0.38905385250000002" blue="0.48106224089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.38039215686274508" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="27"/>
                                         <state key="normal" title="High Score">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="highScoreButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="I3p-Xn-U8t"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECz-45-TCd">
                                         <rect key="frame" x="0.0" y="230" width="384" height="55"/>
-                                        <color key="backgroundColor" red="1" green="0.38905385250000002" blue="0.48106224089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.38039215686274508" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="27"/>
                                         <state key="normal" title="Settings">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="settingsButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVF-50-kwx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -62,7 +72,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="1" green="0.58764332975104594" blue="0.94978042371387272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.87058823529411766" green="0.56862745098039214" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Hhk-eB-FPm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="2lt-54-zMW"/>
                             <constraint firstItem="Huq-5K-NGh" firstAttribute="top" secondItem="Hhk-eB-FPm" secondAttribute="bottom" constant="125" id="kkX-ar-MnO"/>
@@ -74,10 +84,64 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j7T-Oh-S3o"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="8bC-Xf-vdC" id="gNZ-VY-N9v"/>
+                        <outlet property="highScoreButton" destination="gBg-cJ-JjF" id="wCv-vw-Viq"/>
+                        <outlet property="logoImage" destination="Hhk-eB-FPm" id="CUz-ZX-PIB"/>
+                        <outlet property="newGameButton" destination="Qpb-B5-Wf8" id="YqK-Vl-Hom"/>
+                        <outlet property="settingButton" destination="ECz-45-TCd" id="fiK-Dl-yfr"/>
+                        <segue destination="d9x-Wn-DS6" kind="show" id="rh0-mg-4JZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="802.89855072463774" y="93.75"/>
+        </scene>
+        <!--High Score Screen View Controller-->
+        <scene sceneID="dhY-ZK-JMd">
+            <objects>
+                <viewController storyboardIdentifier="HighScoreScreenViewController" id="ZZl-8p-LPi" customClass="HighScoreScreenViewController" customModule="WhoKnowsGameProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K5k-SQ-2Wo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NqF-gL-BLn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTY-NE-eOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1706" y="-646"/>
+        </scene>
+        <!--New Game Screen View Controller-->
+        <scene sceneID="feD-ri-aGx">
+            <objects>
+                <viewController storyboardIdentifier="NewGameScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d9x-Wn-DS6" customClass="NewGameScreenViewController" customModule="WhoKnowsGameProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qKo-6q-zgl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dmZ-Es-KZ2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jKG-eh-pGo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rcp-Ty-6lC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1706" y="94"/>
+        </scene>
+        <!--Settings Screen View Controller-->
+        <scene sceneID="NUc-HK-wrg">
+            <objects>
+                <viewController storyboardIdentifier="SettingsScreenViewController" id="CSE-FI-3Bx" customClass="SettingsScreenViewController" customModule="WhoKnowsGameProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VxA-Eu-ZPe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="X1Y-jJ-dYN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Trq-im-QNt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1706" y="867"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MrY-BM-N6k">
@@ -100,5 +164,8 @@
     </scenes>
     <resources>
         <image name="brainlogo" width="417" height="487"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

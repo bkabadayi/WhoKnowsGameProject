@@ -13,6 +13,11 @@
 		7A535ED025A644930047E42D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A535ECE25A644930047E42D /* Main.storyboard */; };
 		7A535ED225A644950047E42D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A535ED125A644950047E42D /* Assets.xcassets */; };
 		7A535ED525A644950047E42D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A535ED325A644950047E42D /* LaunchScreen.storyboard */; };
+		7A535EE125A650800047E42D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A535EE025A650800047E42D /* UIViewExtension.swift */; };
+		7A535EEA25A6DFB60047E42D /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A535EE925A6DFB60047E42D /* UIButtonExtension.swift */; };
+		7A68E0D325A6F6060032E87B /* NewGameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E0D225A6F6060032E87B /* NewGameScreenViewController.swift */; };
+		7A68E0D725A6F8A90032E87B /* HighScoreScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E0D625A6F8A90032E87B /* HighScoreScreenViewController.swift */; };
+		7A68E0DA25A6F9C30032E87B /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E0D925A6F9C30032E87B /* SettingsScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		7A535ED125A644950047E42D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A535ED425A644950047E42D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A535ED625A644950047E42D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A535EE025A650800047E42D /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		7A535EE925A6DFB60047E42D /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		7A68E0D225A6F6060032E87B /* NewGameScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameScreenViewController.swift; sourceTree = "<group>"; };
+		7A68E0D625A6F8A90032E87B /* HighScoreScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreScreenViewController.swift; sourceTree = "<group>"; };
+		7A68E0D925A6F9C30032E87B /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,36 @@
 		7A535EC725A644930047E42D /* WhoKnowsGameProject */ = {
 			isa = PBXGroup;
 			children = (
+				7A535EDF25A6506E0047E42D /* Extensions */,
+				7A68E0D125A6F5DF0032E87B /* Controllers */,
 				7A535EC825A644930047E42D /* AppDelegate.swift */,
 				7A535ECA25A644930047E42D /* SceneDelegate.swift */,
-				7A535ECC25A644930047E42D /* OpeningScreenViewController.swift */,
 				7A535ECE25A644930047E42D /* Main.storyboard */,
 				7A535ED125A644950047E42D /* Assets.xcassets */,
 				7A535ED325A644950047E42D /* LaunchScreen.storyboard */,
 				7A535ED625A644950047E42D /* Info.plist */,
 			);
 			path = WhoKnowsGameProject;
+			sourceTree = "<group>";
+		};
+		7A535EDF25A6506E0047E42D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A535EE025A650800047E42D /* UIViewExtension.swift */,
+				7A535EE925A6DFB60047E42D /* UIButtonExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7A68E0D125A6F5DF0032E87B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A535ECC25A644930047E42D /* OpeningScreenViewController.swift */,
+				7A68E0D225A6F6060032E87B /* NewGameScreenViewController.swift */,
+				7A68E0D625A6F8A90032E87B /* HighScoreScreenViewController.swift */,
+				7A68E0D925A6F9C30032E87B /* SettingsScreenViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +169,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A535ECD25A644930047E42D /* OpeningScreenViewController.swift in Sources */,
+				7A68E0DA25A6F9C30032E87B /* SettingsScreenViewController.swift in Sources */,
+				7A68E0D325A6F6060032E87B /* NewGameScreenViewController.swift in Sources */,
+				7A535EEA25A6DFB60047E42D /* UIButtonExtension.swift in Sources */,
+				7A68E0D725A6F8A90032E87B /* HighScoreScreenViewController.swift in Sources */,
 				7A535EC925A644930047E42D /* AppDelegate.swift in Sources */,
+				7A535EE125A650800047E42D /* UIViewExtension.swift in Sources */,
 				7A535ECB25A644930047E42D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
