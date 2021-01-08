@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+class TriviaCategoryModel: Codable {
+    var trivia_categories: [TriviaCategory] = []
+}

@@ -13,7 +13,7 @@ extension UIView {
         self.layer.masksToBounds = true
     }
     
-    func prepareComponentColor(_ hexValue: UInt) {
+    func prepareComponentBackgroundColor(_ hexValue: UInt) {
         self.backgroundColor =  UIColor(red: CGFloat((hexValue & 0xFF0000) >> 16) / 255.0,
                                         green: CGFloat((hexValue & 0x00FF00) >> 8) / 255.0,
                                         blue: CGFloat(hexValue & 0x0000FF) / 255.0,

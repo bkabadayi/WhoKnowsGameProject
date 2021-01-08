@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TriviaCategory {
+class TriviaCategory: Codable {
     var id: Int?
     var name: String?
 }

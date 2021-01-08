@@ -5,7 +5,6 @@
 //  Created by Berkin KABADAYI on 7.01.2021.
 //
 
-import Foundation
 import UIKit
 
 class GameButton: BaseButton {

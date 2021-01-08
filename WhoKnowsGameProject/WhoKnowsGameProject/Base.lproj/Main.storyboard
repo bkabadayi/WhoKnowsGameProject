@@ -12,7 +12,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="Opening Screen" customClass="OpeningScreenViewController" customModule="WhoKnowsGameProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="BaseView" customModule="WhoKnowsGameProject" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -24,9 +24,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Huq-5K-NGh">
                                 <rect key="frame" x="15" y="487" width="384" height="285"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpb-B5-Wf8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpb-B5-Wf8" customClass="GameButton" customModule="WhoKnowsGameProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="55"/>
-                                        <color key="backgroundColor" red="0.39039858645103825" green="0.71247254959260575" blue="0.30100961696800738" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.38039215686274508" green="0.72156862745098038" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="FHj-K0-VcG"/>
                                         </constraints>
@@ -38,9 +38,9 @@
                                             <action selector="newGameButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2J-4d-LBH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-cJ-JjF">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-cJ-JjF" customClass="BaseButton" customModule="WhoKnowsGameProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="115" width="384" height="55"/>
-                                        <color key="backgroundColor" red="1" green="0.38039215686274508" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.37254901960784315" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="27"/>
                                         <state key="normal" title="High Score">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,7 +49,7 @@
                                             <action selector="highScoreButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="I3p-Xn-U8t"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECz-45-TCd">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECz-45-TCd" customClass="BaseButton" customModule="WhoKnowsGameProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="230" width="384" height="55"/>
                                         <color key="backgroundColor" red="1" green="0.38039215686274508" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="27"/>
@@ -72,7 +72,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.87058823529411766" green="0.56862745098039214" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.55686274509803924" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Hhk-eB-FPm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="2lt-54-zMW"/>
                             <constraint firstItem="Huq-5K-NGh" firstAttribute="top" secondItem="Hhk-eB-FPm" secondAttribute="bottom" constant="125" id="kkX-ar-MnO"/>
@@ -89,7 +89,7 @@
                         <outlet property="highScoreButton" destination="gBg-cJ-JjF" id="wCv-vw-Viq"/>
                         <outlet property="logoImage" destination="Hhk-eB-FPm" id="CUz-ZX-PIB"/>
                         <outlet property="newGameButton" destination="Qpb-B5-Wf8" id="YqK-Vl-Hom"/>
-                        <outlet property="settingButton" destination="ECz-45-TCd" id="fiK-Dl-yfr"/>
+                        <outlet property="settingsButton" destination="ECz-45-TCd" id="m1B-tp-cPJ"/>
                         <segue destination="d9x-Wn-DS6" kind="show" id="rh0-mg-4JZ"/>
                     </connections>
                 </viewController>
@@ -112,37 +112,37 @@
             </objects>
             <point key="canvasLocation" x="1706" y="-646"/>
         </scene>
-        <!--New Game Screen View Controller-->
+        <!--Game Login Screen View Controller-->
         <scene sceneID="feD-ri-aGx">
             <objects>
-                <viewController storyboardIdentifier="NewGameScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d9x-Wn-DS6" customClass="NewGameScreenViewController" customModule="WhoKnowsGameProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qKo-6q-zgl">
+                <viewController storyboardIdentifier="NewGameScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d9x-Wn-DS6" customClass="GameLoginScreenViewController" customModule="WhoKnowsGameProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qKo-6q-zgl" customClass="BaseView" customModule="WhoKnowsGameProject" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="94" translatesAutoresizingMaskIntoConstraints="NO" id="aTc-ah-rUI">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="aTc-ah-rUI">
                                 <rect key="frame" x="15" y="103" width="384" height="744"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="1TO-il-dcv">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="580"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1TO-il-dcv">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="604"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="0X4-7h-MQ7">
-                                                <rect key="frame" x="0.0" y="0.0" width="384" height="215"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="245"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89b-3j-L4G">
-                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="80"/>
-                                                        <color key="backgroundColor" red="0.42731104559999999" green="0.094932167040000001" blue="0.8696242824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89b-3j-L4G" customClass="BaseLabel" customModule="WhoKnowsGameProject" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="50"/>
+                                                        <color key="backgroundColor" red="0.43137254901960786" green="0.0" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="80" id="zSy-kI-WnK"/>
+                                                            <constraint firstAttribute="height" constant="50" id="zSy-kI-WnK"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uec-HM-Vrd">
-                                                        <rect key="frame" x="0.0" y="115" width="384" height="100"/>
+                                                        <rect key="frame" x="0.0" y="85" width="384" height="160"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="100" id="rcg-zv-GKK"/>
+                                                            <constraint firstAttribute="height" constant="160" id="rcg-zv-GKK"/>
                                                         </constraints>
                                                     </pickerView>
                                                 </subviews>
@@ -152,17 +152,17 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="N7T-M1-kdx">
-                                                <rect key="frame" x="0.0" y="265" width="384" height="215"/>
+                                                <rect key="frame" x="0.0" y="275" width="384" height="245"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMY-xl-znZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="80"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMY-xl-znZ" customClass="BaseLabel" customModule="WhoKnowsGameProject" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="50"/>
                                                         <color key="backgroundColor" red="0.42731104559999999" green="0.094932167040000001" blue="0.8696242824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="27"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8J-86-ADM">
-                                                        <rect key="frame" x="0.0" y="115" width="384" height="100"/>
+                                                        <rect key="frame" x="0.0" y="85" width="384" height="160"/>
                                                     </pickerView>
                                                 </subviews>
                                                 <constraints>
@@ -170,10 +170,10 @@
                                                     <constraint firstItem="o8J-86-ADM" firstAttribute="width" secondItem="N7T-M1-kdx" secondAttribute="width" id="uko-r6-p0k"/>
                                                 </constraints>
                                             </stackView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Please enter your name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hEW-fg-WOz">
-                                                <rect key="frame" x="0.0" y="530" width="384" height="50"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hEW-fg-WOz">
+                                                <rect key="frame" x="0.0" y="550" width="384" height="54"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="OKp-9d-Tdn"/>
+                                                    <constraint firstAttribute="height" constant="54" id="RBb-Lw-PLf"/>
                                                 </constraints>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="18"/>
@@ -188,7 +188,7 @@
                                             <constraint firstItem="0X4-7h-MQ7" firstAttribute="width" secondItem="1TO-il-dcv" secondAttribute="width" id="z10-2M-f9V"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4e3-oV-bs8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4e3-oV-bs8" customClass="GameButton" customModule="WhoKnowsGameProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="674" width="384" height="70"/>
                                         <color key="backgroundColor" red="0.38042187690000001" green="0.71968573329999996" blue="0.27619469169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -198,6 +198,9 @@
                                         <state key="normal" title="START">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="startButtonTouched" destination="d9x-Wn-DS6" eventType="touchUpInside" id="Rj4-dH-qRH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -216,6 +219,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jKG-eh-pGo"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="qKo-6q-zgl" id="uEx-4r-fMm"/>
+                        <outlet property="categoryLabel" destination="89b-3j-L4G" id="0np-BY-SRw"/>
+                        <outlet property="categoryPickerView" destination="uec-HM-Vrd" id="zQT-f6-h0n"/>
+                        <outlet property="difficultyLabel" destination="sMY-xl-znZ" id="ekP-kV-1wU"/>
+                        <outlet property="difficultyPickerView" destination="o8J-86-ADM" id="odb-hh-Qi7"/>
+                        <outlet property="nameEntranceTextField" destination="hEW-fg-WOz" id="Ikt-mf-UIu"/>
+                        <outlet property="startButton" destination="4e3-oV-bs8" id="xDW-Wu-0c8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rcp-Ty-6lC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
