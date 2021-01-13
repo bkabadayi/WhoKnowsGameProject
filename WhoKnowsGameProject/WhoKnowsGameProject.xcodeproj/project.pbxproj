@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A48589425AA5FB200ED8778 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A48589325AA5FB200ED8778 /* UserModel.swift */; };
 		7A535EC925A644930047E42D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A535EC825A644930047E42D /* AppDelegate.swift */; };
 		7A535ECB25A644930047E42D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A535ECA25A644930047E42D /* SceneDelegate.swift */; };
 		7A535ECD25A644930047E42D /* OpeningScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A535ECC25A644930047E42D /* OpeningScreenViewController.swift */; };
@@ -21,16 +22,25 @@
 		7A68E0DE25A70EBA0032E87B /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E0DD25A70EBA0032E87B /* BaseLabel.swift */; };
 		7A68E0E125A715C10032E87B /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E0E025A715C10032E87B /* BaseButton.swift */; };
 		7A68E0E425A717C20032E87B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E0E325A717C20032E87B /* BaseView.swift */; };
-		7A68E0E725A7196A0032E87B /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E0E625A7196A0032E87B /* GameButton.swift */; };
+		7A68E0E725A7196A0032E87B /* GoToGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E0E625A7196A0032E87B /* GoToGameButton.swift */; };
 		7A68E0EA25A71BF70032E87B /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E0E925A71BF70032E87B /* UILabelExtension.swift */; };
 		7A68E0F125A730B00032E87B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E0F025A730B00032E87B /* BaseViewController.swift */; };
 		7A68E0F725A736A00032E87B /* GamePlayScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E0F625A736A00032E87B /* GamePlayScreenViewController.swift */; };
 		7A68E10425A748450032E87B /* TriviaCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E10325A748450032E87B /* TriviaCategoryModel.swift */; };
 		7A68E10725A748B40032E87B /* TriviaCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E10625A748B40032E87B /* TriviaCategory.swift */; };
+		7A68E11025A868010032E87B /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E10F25A868010032E87B /* MenuButton.swift */; };
+		7A68E11325A868CF0032E87B /* InGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E11225A868CF0032E87B /* InGameButton.swift */; };
+		7A68E11C25A87C530032E87B /* TriviaQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E11B25A87C530032E87B /* TriviaQuestionModel.swift */; };
+		7A68E11F25A87C890032E87B /* TriviaQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E11E25A87C890032E87B /* TriviaQuestion.swift */; };
+		7A68E12325A91C4D0032E87B /* ConclusionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68E12225A91C4D0032E87B /* ConclusionScreenViewController.swift */; };
+		7AAA10A225AC2D6300507F1A /* BackgroundMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA10A125AC2D6300507F1A /* BackgroundMusic.swift */; };
+		7AAA10A625AC34D900507F1A /* backgroundmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7AAA10A525AC34D900507F1A /* backgroundmusic.mp3 */; };
+		7AAA10A925AC636B00507F1A /* BackgroundMusicSwitchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA10A825AC636B00507F1A /* BackgroundMusicSwitchStatus.swift */; };
 		872EB205F2624898B8FE01DC /* Pods_WhoKnowsGameProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB8776AA40EB217A17B0A2B /* Pods_WhoKnowsGameProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A48589325AA5FB200ED8778 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		7A535EC525A644930047E42D /* WhoKnowsGameProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoKnowsGameProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A535EC825A644930047E42D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A535ECA25A644930047E42D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,12 +57,20 @@
 		7A68E0DD25A70EBA0032E87B /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		7A68E0E025A715C10032E87B /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		7A68E0E325A717C20032E87B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		7A68E0E625A7196A0032E87B /* GameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
+		7A68E0E625A7196A0032E87B /* GoToGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToGameButton.swift; sourceTree = "<group>"; };
 		7A68E0E925A71BF70032E87B /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		7A68E0F025A730B00032E87B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7A68E0F625A736A00032E87B /* GamePlayScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayScreenViewController.swift; sourceTree = "<group>"; };
 		7A68E10325A748450032E87B /* TriviaCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaCategoryModel.swift; sourceTree = "<group>"; };
 		7A68E10625A748B40032E87B /* TriviaCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaCategory.swift; sourceTree = "<group>"; };
+		7A68E10F25A868010032E87B /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		7A68E11225A868CF0032E87B /* InGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InGameButton.swift; sourceTree = "<group>"; };
+		7A68E11B25A87C530032E87B /* TriviaQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaQuestionModel.swift; sourceTree = "<group>"; };
+		7A68E11E25A87C890032E87B /* TriviaQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaQuestion.swift; sourceTree = "<group>"; };
+		7A68E12225A91C4D0032E87B /* ConclusionScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConclusionScreenViewController.swift; sourceTree = "<group>"; };
+		7AAA10A125AC2D6300507F1A /* BackgroundMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMusic.swift; sourceTree = "<group>"; };
+		7AAA10A525AC34D900507F1A /* backgroundmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundmusic.mp3; sourceTree = "<group>"; };
+		7AAA10A825AC636B00507F1A /* BackgroundMusicSwitchStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMusicSwitchStatus.swift; sourceTree = "<group>"; };
 		BBB8776AA40EB217A17B0A2B /* Pods_WhoKnowsGameProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoKnowsGameProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8DF03A28F4F2BAD089B198 /* Pods-WhoKnowsGameProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoKnowsGameProject.debug.xcconfig"; path = "Target Support Files/Pods-WhoKnowsGameProject/Pods-WhoKnowsGameProject.debug.xcconfig"; sourceTree = "<group>"; };
 		DAC1E53D995DCD3268206FB8 /* Pods-WhoKnowsGameProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoKnowsGameProject.release.xcconfig"; path = "Target Support Files/Pods-WhoKnowsGameProject/Pods-WhoKnowsGameProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +96,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7A48589225AA5FA000ED8778 /* UserModels */ = {
+			isa = PBXGroup;
+			children = (
+				7A48589325AA5FB200ED8778 /* UserModel.swift */,
+			);
+			path = UserModels;
+			sourceTree = "<group>";
+		};
+		7A4858BD25AB662300ED8778 /* CategoryModels */ = {
+			isa = PBXGroup;
+			children = (
+				7A68E10325A748450032E87B /* TriviaCategoryModel.swift */,
+				7A68E10625A748B40032E87B /* TriviaCategory.swift */,
+			);
+			path = CategoryModels;
+			sourceTree = "<group>";
+		};
+		7A4858BE25AB663600ED8778 /* QuestionModels */ = {
+			isa = PBXGroup;
+			children = (
+				7A68E11B25A87C530032E87B /* TriviaQuestionModel.swift */,
+				7A68E11E25A87C890032E87B /* TriviaQuestion.swift */,
+			);
+			path = QuestionModels;
+			sourceTree = "<group>";
+		};
+		7A4858BF25AB667600ED8778 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A535ECE25A644930047E42D /* Main.storyboard */,
+				7A535ED325A644950047E42D /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7A535EBC25A644930047E42D = {
 			isa = PBXGroup;
 			children = (
@@ -99,16 +152,17 @@
 		7A535EC725A644930047E42D /* WhoKnowsGameProject */ = {
 			isa = PBXGroup;
 			children = (
+				7A68E11625A86C600032E87B /* Helpers */,
+				7A535EDF25A6506E0047E42D /* Extensions */,
 				7A68E0DC25A70EA70032E87B /* BaseComponents */,
 				7A68E0F325A730E60032E87B /* Models */,
 				7A68E0D125A6F5DF0032E87B /* Controllers */,
+				7A4858BF25AB667600ED8778 /* Views */,
+				7AAA10A425AC349500507F1A /* Audios */,
 				7A535EC825A644930047E42D /* AppDelegate.swift */,
 				7A535ECA25A644930047E42D /* SceneDelegate.swift */,
-				7A535ECE25A644930047E42D /* Main.storyboard */,
 				7A535ED125A644950047E42D /* Assets.xcassets */,
-				7A535ED325A644950047E42D /* LaunchScreen.storyboard */,
 				7A535ED625A644950047E42D /* Info.plist */,
-				7A535EDF25A6506E0047E42D /* Extensions */,
 			);
 			path = WhoKnowsGameProject;
 			sourceTree = "<group>";
@@ -129,6 +183,7 @@
 				7A535ECC25A644930047E42D /* OpeningScreenViewController.swift */,
 				7A68E0D225A6F6060032E87B /* GameLoginScreenViewController.swift */,
 				7A68E0F625A736A00032E87B /* GamePlayScreenViewController.swift */,
+				7A68E12225A91C4D0032E87B /* ConclusionScreenViewController.swift */,
 				7A68E0D625A6F8A90032E87B /* HighScoreScreenViewController.swift */,
 				7A68E0D925A6F9C30032E87B /* SettingsScreenViewController.swift */,
 			);
@@ -149,11 +204,47 @@
 		7A68E0F325A730E60032E87B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7A68E0E625A7196A0032E87B /* GameButton.swift */,
-				7A68E10325A748450032E87B /* TriviaCategoryModel.swift */,
-				7A68E10625A748B40032E87B /* TriviaCategory.swift */,
+				7A48589225AA5FA000ED8778 /* UserModels */,
+				7A68E12625A9E6980032E87B /* ButtonModels */,
+				7A68E12725A9E6B00032E87B /* ServiceModels */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7A68E11625A86C600032E87B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7AAA10A125AC2D6300507F1A /* BackgroundMusic.swift */,
+				7AAA10A825AC636B00507F1A /* BackgroundMusicSwitchStatus.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7A68E12625A9E6980032E87B /* ButtonModels */ = {
+			isa = PBXGroup;
+			children = (
+				7A68E10F25A868010032E87B /* MenuButton.swift */,
+				7A68E0E625A7196A0032E87B /* GoToGameButton.swift */,
+				7A68E11225A868CF0032E87B /* InGameButton.swift */,
+			);
+			path = ButtonModels;
+			sourceTree = "<group>";
+		};
+		7A68E12725A9E6B00032E87B /* ServiceModels */ = {
+			isa = PBXGroup;
+			children = (
+				7A4858BD25AB662300ED8778 /* CategoryModels */,
+				7A4858BE25AB663600ED8778 /* QuestionModels */,
+			);
+			path = ServiceModels;
+			sourceTree = "<group>";
+		};
+		7AAA10A425AC349500507F1A /* Audios */ = {
+			isa = PBXGroup;
+			children = (
+				7AAA10A525AC34D900507F1A /* backgroundmusic.mp3 */,
+			);
+			path = Audios;
 			sourceTree = "<group>";
 		};
 		CDC990BC035F6E5761292CB3 /* Pods */ = {
@@ -226,6 +317,7 @@
 			files = (
 				7A535ED525A644950047E42D /* LaunchScreen.storyboard in Resources */,
 				7A535ED225A644950047E42D /* Assets.xcassets in Resources */,
+				7AAA10A625AC34D900507F1A /* backgroundmusic.mp3 in Resources */,
 				7A535ED025A644930047E42D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,20 +371,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A68E11C25A87C530032E87B /* TriviaQuestionModel.swift in Sources */,
 				7A535ECD25A644930047E42D /* OpeningScreenViewController.swift in Sources */,
-				7A68E0E725A7196A0032E87B /* GameButton.swift in Sources */,
+				7A68E0E725A7196A0032E87B /* GoToGameButton.swift in Sources */,
 				7A68E10425A748450032E87B /* TriviaCategoryModel.swift in Sources */,
 				7A68E10725A748B40032E87B /* TriviaCategory.swift in Sources */,
 				7A68E0DE25A70EBA0032E87B /* BaseLabel.swift in Sources */,
+				7A68E11325A868CF0032E87B /* InGameButton.swift in Sources */,
 				7A68E0DA25A6F9C30032E87B /* SettingsScreenViewController.swift in Sources */,
+				7A48589425AA5FB200ED8778 /* UserModel.swift in Sources */,
 				7A68E0D325A6F6060032E87B /* GameLoginScreenViewController.swift in Sources */,
 				7A68E0F125A730B00032E87B /* BaseViewController.swift in Sources */,
 				7A535EEA25A6DFB60047E42D /* UIButtonExtension.swift in Sources */,
 				7A68E0D725A6F8A90032E87B /* HighScoreScreenViewController.swift in Sources */,
 				7A68E0E125A715C10032E87B /* BaseButton.swift in Sources */,
 				7A535EC925A644930047E42D /* AppDelegate.swift in Sources */,
+				7AAA10A925AC636B00507F1A /* BackgroundMusicSwitchStatus.swift in Sources */,
 				7A68E0F725A736A00032E87B /* GamePlayScreenViewController.swift in Sources */,
+				7A68E12325A91C4D0032E87B /* ConclusionScreenViewController.swift in Sources */,
+				7AAA10A225AC2D6300507F1A /* BackgroundMusic.swift in Sources */,
 				7A535EE125A650800047E42D /* UIViewExtension.swift in Sources */,
+				7A68E11F25A87C890032E87B /* TriviaQuestion.swift in Sources */,
+				7A68E11025A868010032E87B /* MenuButton.swift in Sources */,
 				7A68E0E425A717C20032E87B /* BaseView.swift in Sources */,
 				7A535ECB25A644930047E42D /* SceneDelegate.swift in Sources */,
 				7A68E0EA25A71BF70032E87B /* UILabelExtension.swift in Sources */,

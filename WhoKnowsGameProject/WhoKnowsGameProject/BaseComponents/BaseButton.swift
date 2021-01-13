@@ -8,8 +8,8 @@
 import UIKit
 
 class BaseButton: UIButton {
-    func prepareButton() {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
         prepareComponentRadius(15)
-        prepareComponentBackgroundColor(0xFA5251)
     }
 }

@@ -7,9 +7,9 @@
 
 import UIKit
 
-class GameButton: BaseButton {
-    override func prepareButton() {
-        prepareComponentRadius(15)
+class GoToGameButton: BaseButton {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
         prepareComponentBackgroundColor(0x61B846)
     }
 }

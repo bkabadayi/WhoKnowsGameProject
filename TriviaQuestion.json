@@ -1,0 +1,17 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Entertainment: Film",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "Which actors made up the trio in &quot;The Good, the Bad, and the Ugly&quot;? ",
+            "correct_answer": "Clint Eastwood, Eli Wallach, and Lee Van Cleef",
+            "incorrect_answers": [
+                "Sergio Leone, Ennio Morricone, and Tonino Delli Colli",
+                "Yul Brynner, Steve McQueen, and Charles Bronson",
+                "Aldo Giuffr&egrave;, Mario Brega, and Luigi Pistilli"
+            ]
+        }
+    ]
+}

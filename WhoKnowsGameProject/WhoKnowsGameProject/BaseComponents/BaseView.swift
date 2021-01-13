@@ -8,7 +8,8 @@
 import UIKit
 
 class BaseView: UIView {
-    func prepareView() {
-        prepareComponentBackgroundColor(0xDF8EFA)
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        prepareComponentBackgroundColor(0xE08AFD)
     }
 }

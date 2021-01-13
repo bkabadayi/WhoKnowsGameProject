@@ -8,9 +8,9 @@
 import UIKit
 
 class BaseLabel: UILabel {
-    func prepareLabel() {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
         prepareComponentRadius(15)
         prepareComponentBackgroundColor(0x6E00E2)
     }
 }
-

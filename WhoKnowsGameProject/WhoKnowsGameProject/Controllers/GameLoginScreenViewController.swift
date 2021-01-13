@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-class GameLoginScreenViewController: BaseViewController {
+final class GameLoginScreenViewController: BaseViewController {
     
     @IBOutlet var backgroundView: BaseView!
     
@@ -20,11 +20,9 @@ class GameLoginScreenViewController: BaseViewController {
     
     @IBOutlet weak var nameEntranceTextField: UITextField!
     
-    @IBOutlet weak var startButton: GameButton!
+    @IBOutlet weak var startButton: GoToGameButton!
     
-    var selectedCategory: Int?
-    var selectedDifficulty: String?
-    
+    var player = UserModel()
     var pickerCategoryData = TriviaCategoryModel()
     var pickerDifficultyData: [String] = []
     
@@ -34,21 +32,14 @@ class GameLoginScreenViewController: BaseViewController {
     }
     
     fileprivate func prepareUI() {
-        prepareViewsButtonsAndLabels()
+        prepareLabelsAndButtonsName()
         preparePickerViews()
-        prepareNavigateBar()
     }
     
-    fileprivate func prepareViewsButtonsAndLabels() {
-        backgroundView.prepareView()
-        
-        categoryLabel.prepareLabel()
+    fileprivate func prepareLabelsAndButtonsName() {
         categoryLabel.prepareLabelName("Category")
-        
-        difficultyLabel.prepareLabel()
         difficultyLabel.prepareLabelName("Difficulty")
         
-        startButton.prepareButton()
         startButton.prepareButtonName("START")
     }
     
@@ -61,26 +52,39 @@ class GameLoginScreenViewController: BaseViewController {
         difficultyPickerView.tag = 2
         difficultyPickerView.delegate = self
         difficultyPickerView.dataSource = self
-        pickerDifficultyData.append("Easy")
-        pickerDifficultyData.append("Medium")
-        pickerDifficultyData.append("Hard")
+        pickerDifficultyData.append("easy")
+        pickerDifficultyData.append("medium")
+        pickerDifficultyData.append("hard")
     }
     
-    func getCategoryData() {
+    fileprivate func setNameData() {
+        if nameEntranceTextField.text != "" {                               // "nameEntranceTextField.text != nil" neden olmuyor
+            player.userName = nameEntranceTextField.text
+        }
+        else {
+            let nameAlert = UIAlertController(title: "You didn't enter your name", message: "You should enter your name before the game starts!", preferredStyle: .alert)
+            nameAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(nameAlert, animated: true)
+        }
+    }
+    
+    fileprivate func getCategoryData() {
         AF.request("https://opentdb.com/api_category.php").responseJSON { response in
             if let categoryData = response.data {
                 let categoryList = try! JSONDecoder().decode(TriviaCategoryModel.self, from: categoryData)
-                self.pickerCategoryData.trivia_categories = categoryList.trivia_categories
+                self.pickerCategoryData = categoryList
                 self.categoryPickerView.reloadAllComponents()
             }
         }
     }
-
+    
     @IBAction func startButtonTouched() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let gamePlayScreenViewController = storyboard.instantiateViewController(identifier: "GamePlayScreenViewController") as! GamePlayScreenViewController
-        gamePlayScreenViewController.selectedCategory = selectedCategory
-        gamePlayScreenViewController.selectedDifficulty = selectedDifficulty
+        setNameData()
+        gamePlayScreenViewController.player.userName = player.userName
+        gamePlayScreenViewController.player.selectedCategory = player.selectedCategory
+        gamePlayScreenViewController.player.selectedDifficulty = player.selectedDifficulty
         navigationController?.pushViewController(gamePlayScreenViewController, animated: true)
     }
 }
@@ -104,10 +108,10 @@ extension GameLoginScreenViewController: UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 {
-            selectedCategory = pickerCategoryData.trivia_categories[row].id
+            player.selectedCategory = pickerCategoryData.trivia_categories[row]
         }
         else if pickerView.tag == 2 {
-            selectedDifficulty = pickerDifficultyData[row]
+            player.selectedDifficulty = pickerDifficultyData[row]
         }
     }
 }
@@ -118,7 +122,7 @@ extension GameLoginScreenViewController: UIPickerViewDelegate {
             return pickerCategoryData.trivia_categories[row].name
         }
         else if pickerView.tag == 2 {
-            return pickerDifficultyData[row]
+            return pickerDifficultyData[row].capitalized
         }
         else {
             return ""
