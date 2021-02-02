@@ -11,5 +11,6 @@ class MenuButton: BaseButton {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         prepareComponentBackgroundColor(0xFA5251)
+        self.setTitleColor(.black, for: .normal)
     }
 }

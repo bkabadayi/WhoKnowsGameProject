@@ -38,7 +38,7 @@
                                             <action selector="newGameButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2J-4d-LBH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-cJ-JjF" customClass="BaseButton" customModule="WhoKnowsGameProject" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-cJ-JjF" customClass="MenuButton" customModule="WhoKnowsGameProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="115" width="384" height="55"/>
                                         <color key="backgroundColor" red="1" green="0.37254901960784315" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="27"/>
@@ -49,7 +49,7 @@
                                             <action selector="highScoreButtonTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="I3p-Xn-U8t"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECz-45-TCd" customClass="BaseButton" customModule="WhoKnowsGameProject" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECz-45-TCd" customClass="MenuButton" customModule="WhoKnowsGameProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="230" width="384" height="55"/>
                                         <color key="backgroundColor" red="1" green="0.38039215686274508" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="27"/>
@@ -945,18 +945,19 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhJ-n9-bne" customClass="MenuButton" customModule="WhoKnowsGameProject" customModuleProvider="target">
                                 <rect key="frame" x="15" y="199" width="384" height="63"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="27"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="resetDefaultButtonTouched:" destination="CSE-FI-3Bx" eventType="touchUpInside" id="q7Y-9S-PrL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VP1-eJ-ytt" customClass="BaseLabel" customModule="WhoKnowsGameProject" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VP1-eJ-ytt" customClass="BaseLabel" customModule="WhoKnowsGameProject" customModuleProvider="target">
                                 <rect key="frame" x="15" y="94" width="384" height="55"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="GeJ-yY-76w"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

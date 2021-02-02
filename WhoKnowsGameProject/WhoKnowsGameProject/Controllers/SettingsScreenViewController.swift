@@ -9,11 +9,8 @@ import UIKit
 
 final class SettingsScreenViewController: BaseViewController {
     @IBOutlet var backgroundView: BaseView!
-    
     @IBOutlet weak var backgroundMusicLabel: BaseLabel!
-    
     @IBOutlet weak var resetDefaultButton: MenuButton!
-    
     @IBOutlet weak var backgroundMusicSwitch: UISwitch!
     
     override func viewDidLoad() {
@@ -41,6 +38,14 @@ final class SettingsScreenViewController: BaseViewController {
         BackgroundMusic.shared.isMusicOn = backgroundMusicSwitch.isOn
         BackgroundMusicSwitchStatus.shared.isStatusOn = backgroundMusicSwitch.isOn
         BackgroundMusic.shared.prepareBackgroundMusic()
+        
+        let encoderMusic = JSONEncoder()
+        let savedMusic = try! encoderMusic.encode(BackgroundMusic.shared.isMusicOn)
+        UserDefaults.standard.set(savedMusic, forKey: "music")
+        
+        let encoderMusicStatus = JSONEncoder()
+        let savedMusicStatus = try! encoderMusicStatus.encode(BackgroundMusicSwitchStatus.shared.isStatusOn)
+        UserDefaults.standard.set(savedMusicStatus, forKey: "musicSwitch")
     }
     
     @IBAction func resetDefaultButtonTouched(_ sender: Any) {

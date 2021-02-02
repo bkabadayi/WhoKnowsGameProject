@@ -54,10 +54,14 @@ final class GamePlayScreenViewController: BaseViewController {
     }
     
     fileprivate func getQuestionData() {
+//        activityView.startAnimating()
+//        blurredBackground()
         AF.request("https://opentdb.com/api.php?amount=1&category=\(player.selectedCategory.id ?? 0)&difficulty=\(player.selectedDifficulty ?? "")&type=multiple").responseJSON { response in
             if let questionData = response.data {
                 let apiQuestion = try! JSONDecoder().decode(TriviaQuestionModel.self, from: questionData)
                 self.question = apiQuestion
+//                self.disableBlur()
+//                self.activityView.stopAnimating()
                 self.questionLabel.prepareLabelName(self.question.results[0].question)
                 self.questionLabel.reloadInputViews()
                 self.prepareAllButtonsName()
@@ -303,10 +307,7 @@ final class GamePlayScreenViewController: BaseViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let conclusionScreenViewController = storyboard.instantiateViewController(identifier: "ConclusionScreenViewController") as! ConclusionScreenViewController
         conclusionScreenViewController.trueAnswersCount = questionCounter - 1
-        conclusionScreenViewController.player.userName = player.userName
-        conclusionScreenViewController.player.score = player.score
-        conclusionScreenViewController.player.selectedCategory = player.selectedCategory
-        conclusionScreenViewController.player.selectedDifficulty = player.selectedDifficulty
+        conclusionScreenViewController.player = player
         navigationController?.pushViewController(conclusionScreenViewController, animated: true)
     }
 }

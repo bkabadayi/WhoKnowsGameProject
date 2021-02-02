@@ -9,22 +9,17 @@ import UIKit
 import Alamofire
 
 final class GameLoginScreenViewController: BaseViewController {
-    
     @IBOutlet var backgroundView: BaseView!
-    
     @IBOutlet weak var categoryLabel: BaseLabel!
     @IBOutlet weak var difficultyLabel: BaseLabel!
-    
     @IBOutlet weak var categoryPickerView: UIPickerView!
     @IBOutlet weak var difficultyPickerView: UIPickerView!
-    
     @IBOutlet weak var nameEntranceTextField: UITextField!
-    
     @IBOutlet weak var startButton: GoToGameButton!
-    
+
     var player = UserModel()
     var pickerCategoryData = TriviaCategoryModel()
-    var pickerDifficultyData: [String] = []
+    var pickerDifficultyData = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +34,6 @@ final class GameLoginScreenViewController: BaseViewController {
     fileprivate func prepareLabelsAndButtonsName() {
         categoryLabel.prepareLabelName("Category")
         difficultyLabel.prepareLabelName("Difficulty")
-        
         startButton.prepareButtonName("START")
     }
     
@@ -58,7 +52,7 @@ final class GameLoginScreenViewController: BaseViewController {
     }
     
     fileprivate func setNameData() {
-        if nameEntranceTextField.text != "" {                               // "nameEntranceTextField.text != nil" neden olmuyor
+        if nameEntranceTextField.text != nil {
             player.userName = nameEntranceTextField.text
         }
         else {
@@ -69,11 +63,16 @@ final class GameLoginScreenViewController: BaseViewController {
     }
     
     fileprivate func getCategoryData() {
+        activityView.startAnimating()
+        blurredBackground()
         AF.request("https://opentdb.com/api_category.php").responseJSON { response in
             if let categoryData = response.data {
                 let categoryList = try! JSONDecoder().decode(TriviaCategoryModel.self, from: categoryData)
                 self.pickerCategoryData = categoryList
+                self.disableBlur()
+                self.activityView.stopAnimating()
                 self.categoryPickerView.reloadAllComponents()
+                
             }
         }
     }
@@ -82,9 +81,7 @@ final class GameLoginScreenViewController: BaseViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let gamePlayScreenViewController = storyboard.instantiateViewController(identifier: "GamePlayScreenViewController") as! GamePlayScreenViewController
         setNameData()
-        gamePlayScreenViewController.player.userName = player.userName
-        gamePlayScreenViewController.player.selectedCategory = player.selectedCategory
-        gamePlayScreenViewController.player.selectedDifficulty = player.selectedDifficulty
+        gamePlayScreenViewController.player = player
         navigationController?.pushViewController(gamePlayScreenViewController, animated: true)
     }
 }
